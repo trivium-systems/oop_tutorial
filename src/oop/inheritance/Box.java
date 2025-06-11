@@ -66,9 +66,7 @@ public class Box {
 	public boolean equals(Box this, Object otherBox){
 		if(this == otherBox) return true;
 		if(otherBox == null) return false;
-		if(getClass() != otherBox.getClass()) return false;
-
-		Box box = (Box)otherBox;
+		if(!(otherBox instanceof Box box)) return false;
 
 		return (length == box.length) && (width == box.width) && (height == box.height);
 	}
