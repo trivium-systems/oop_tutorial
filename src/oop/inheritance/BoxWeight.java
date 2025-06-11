@@ -25,10 +25,6 @@ public class BoxWeight extends Box{
 		this.weight = 1;
 	}
 
-	BoxWeight(BoxWeight boxWeight, double weight){
-		super(boxWeight);
-		this.weight = weight;
-	}
 
 	public void display(){
 		super.display();
@@ -42,5 +38,10 @@ public class BoxWeight extends Box{
 		if (this.getClass() != otherBox.getClass()) return false;
 		BoxWeight otherBoxWeight = (BoxWeight) otherBox;
 		return this.weight == otherBoxWeight.weight;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " weight= " + weight;
 	}
 }

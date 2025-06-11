@@ -63,11 +63,17 @@ public class Box {
 
 
 	@Override
-	public boolean equals(Box this, Object otherBox){
-		if(this == otherBox) return true;
-		if(otherBox == null) return false;
-		if(!(otherBox instanceof Box box)) return false;
+	public boolean equals(Box this, Object otherBox) {
+		if (this == otherBox) return true;
+		if (otherBox == null) return false;
+		if (!(otherBox instanceof Box box)) return false;
 
 		return (length == box.length) && (width == box.width) && (height == box.height);
+	}
+
+
+	@Override
+	public String toString() {
+		return "Box{" + "length=" + length + ", width=" + width + ", height=" + height + '}';
 	}
 }
