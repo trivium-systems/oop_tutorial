@@ -2,6 +2,7 @@ package oop;
 
 class Human {
 	// Data/fields
+	static String life;
 	// A) Static
 	static int count = 0;
 
